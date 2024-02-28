@@ -256,7 +256,7 @@ Füge folgendes in **Home.vue** hinzu um zu testen, ob alles funktioniert (Wenn 
 
 ### 18. Abschluss
 
-    Du hast das Setup nun abgeschlossen und Deine Applikation ist bereit um mit vue.js im Frontend und Laravel im Backend zu arbeiten.
+Du hast das Setup nun abgeschlossen und Deine Applikation ist bereit um mit vue.js im Frontend und Laravel im Backend zu arbeiten.
 
 ## Quellen
 
