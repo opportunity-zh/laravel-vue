@@ -4,7 +4,7 @@ Eine Vorlage für die Verwendung von Laravel mit vue.js.
 
 ## Vorbereiten
 
-### 1. Repository herunterladen oder selbst einrichten
+### 1. Repository herunterladen oder Projekt selbst einrichten
 
 #### 1. Herunterladen
 
