@@ -107,3 +107,17 @@ docker stop $(docker ps -a -q)
 ```bash
 docker rm $(docker ps -a -q)
 ```
+
+### Storage Folder Permission Problem
+
+1. Versuche sail up ohne cache zu starten
+
+```bash
+sail build --no-cache
+```
+
+Falls das nicht funktioniert, versuche die Berechtigungen des storage Ordners zu ändern. Im Projektordner:
+
+```bash
+sudo chmod -R 777 storage
+```
