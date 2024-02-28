@@ -20,6 +20,14 @@ Eine Vorlage für die Verwendung von Laravel mit vue.js.
 npm install
 ```
 
+#### 3. Environment Variablen anpassen
+
+Nimm das **.env.example** File und benenne es um in **.env**. Wenn Du es öffnest, siehst Du, dass der **APP_KEY noch leer** ist. Mit folgendem Befehl kannst Du dir einen Key generieren, damit alles funktioniert.
+
+```bash
+php artisan key:generate
+```
+
 ## Starten
 
 ### 1. Docker Container hochfahren
@@ -41,10 +49,18 @@ npm run dev
 Unter localhost kannst Du nun die Website anschauen.
 
 ```bash
-localhost
+http://localhost
 ```
 
-## 4. Fehlerbehebung
+### 4. PHPMyAdmin aufrufen
+
+Unter localhost:8080 findest Du PHPMyAdmin. Logindaten findest Du im .env File.
+
+```bash
+http://localhost:8080
+```
+
+## Fehlerbehebung
 
 ### 1. Ports besetzt
 
