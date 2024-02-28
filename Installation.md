@@ -24,7 +24,7 @@ curl -s https://laravel.build/laravel-vue | bash
 npm install vue@latest vue-router@4 @vitejs/plugin-vue
 ```
 
-2.2. Öffne das File **vite.config.js** im Rootfolder
+2.2. Öffne das File **vite.config.js** im Rootfolder  
 2.3. Ersetze den Code mit folgendem
 
 ```javascript
@@ -49,8 +49,7 @@ export default defineConfig({
 ```
 
 2.4. Gehe in den Ordner **./resources/js**  
-2.5. Füge ein File mit dem Namen **App.vue** hinzu  
-2.6. Füge folgenden Code hinzu
+2.5. Erstelle ein File mit dem Namen **App.vue** und füge diesen Code hinzu:
 
 ```html
 <template>
@@ -58,8 +57,7 @@ export default defineConfig({
 </template>
 ```
 
-2.7. Öffne im selben Ordner das File **app.js**  
-2.8. Füge folgenden Code hinzu (Dieser Code rendert die Vue-App in das index.html File)
+2.6. Öffne im selben Ordner **app.js** und füge folgendes hinzu (Dieser Code rendert die Vue-App in das index.html File)
 
 ```javascript
 import "./bootstrap";
@@ -70,14 +68,13 @@ import App from "./App.vue";
 createApp(App).mount("#app");
 ```
 
-2.9. Öffne unter **./resources/views/** das welcome.blade.php File
-2.9. Lösche den Inhalt, erstelle eine HTML Grundstruktur, füge folgendes in den Bodytag
+2.7. Öffne **./resources/views/welcome.blade.php**, **lösche den Inhalt**, erstelle eine HTML Grundstruktur, füge folgendes in den Body-Tag
 
 ```html
 <div id="app"></div>
 ```
 
-2.9. Füge folgendes Snipped in den Headtag
+2.8. Füge folgendes Snippet in den Headtag
 
 ```html
 @vite(['resources/js/app.js'])
@@ -105,7 +102,7 @@ http://localhost
 
 ### 6. Router hinzufügen
 
-Das Routing wird nun noch von Laravel gemacht. Wir wollen jedoch eine SPA erstellen und dass das Routing über den Client läuft.
+Das Routing wird momentan noch von Laravel übernommen. Wir wollen jedoch eine SPA erstellen und dass das Routing von vue.js gemacht wird.
 
 6.1. Gehe zu **./resources/js** und erstelle ein File mit dem Namen **router.js**  
 6.2. Kopiere den folgenden Code hinein
@@ -121,7 +118,7 @@ export default createRouter({
 });
 ```
 
-7. Importiere den Router innerhalb von **./resources/app.js**
+### 7. Importiere den Router innerhalb von **./resources/app.js**
 
 ```javascript
 import router from "./router";
