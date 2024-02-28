@@ -21,7 +21,7 @@ curl -s https://laravel.build/laravel-vue | bash
 2.1. Zuerst kopiere folgenden Befehl ins Terminal
 
 ```bash
-    npm install vue vue-router@4 @vitejs/plugin-vue
+npm install vue@latest vue-router@4 @vitejs/plugin-vue
 ```
 
 2.2. Öffne das File **vite.config.js** im Rootfolder
@@ -48,8 +48,8 @@ export default defineConfig({
 });
 ```
 
-2.4. Gehe in den Ordner ./resources/js
-2.5. Füge ein File mit dem Namen **App.vue** hinzu
+2.4. Gehe in den Ordner **./resources/js**  
+2.5. Füge ein File mit dem Namen **App.vue** hinzu  
 2.6. Füge folgenden Code hinzu
 
 ```html
@@ -58,7 +58,7 @@ export default defineConfig({
 </template>
 ```
 
-2.7. Öffne im selben Ordner das File **app.js**
+2.7. Öffne im selben Ordner das File **app.js**  
 2.8. Füge folgenden Code hinzu (Dieser Code rendert die Vue-App in das index.html File)
 
 ```javascript
@@ -83,7 +83,7 @@ createApp(App).mount("#app");
 @vite(['resources/js/app.js'])
 ```
 
-3. Starte Sail (Docker) mit folgendem Befehl
+### 3. Starte Sail (Docker) mit folgendem Befehl
 
 ```bash
 sail up
@@ -91,22 +91,23 @@ sail up
 
 3.1. Wenn die Container nicht laufen, gehe zu Fehlerbehebungen
 
-4. Starte NPM mit dem Befehl
+### 4. Starte NPM mit dem Befehl
 
 ```bash
 npm run dev
 ```
 
-5. Öffne den Browser und besuche localhost (ohne Port)
+### 5. Öffne den Browser und besuche localhost (ohne Port)
 
 ```bash
 http://localhost
 ```
 
-6. Router hinzufügen
-   Das Routing wird nun noch von Laravel gemacht. Wir wollen jedoch eine SPA erstellen und dass das Routing über den Client läuft.
+### 6. Router hinzufügen
 
-6.1. Gehe zu **./resources/js** und erstelle ein File mit dem Namen **router.js**
+Das Routing wird nun noch von Laravel gemacht. Wir wollen jedoch eine SPA erstellen und dass das Routing über den Client läuft.
+
+6.1. Gehe zu **./resources/js** und erstelle ein File mit dem Namen **router.js**  
 6.2. Kopiere den folgenden Code hinein
 
 ```javascript
@@ -132,9 +133,11 @@ import router from "./router";
 createApp(App).use(router).mount("#app");
 ```
 
-8. Erstelle im **./resources** Ordner einen neuen Ordner mit dem Namen **pages**
-9. Füge zwei Files im neu erstellten Ordner hinzu: **Home.vue und Test.vue**
-10. Füge folgendes in die **Home.vue** File ein:
+### 8. Erstelle im **./resources** Ordner einen neuen Ordner mit dem Namen **pages**
+
+### 9. Füge zwei Files im neu erstellten Ordner hinzu: **Home.vue und Test.vue**
+
+### 10. Füge folgendes in die **Home.vue** File ein:
 
 ```html
 <template>
@@ -145,7 +148,7 @@ createApp(App).use(router).mount("#app");
 </template>
 ```
 
-11. Füge folgendes in die **Test.vue** File ein:
+### 11. Füge folgendes in die **Test.vue** File ein:
 
 ```html
 <template>
@@ -154,9 +157,13 @@ createApp(App).use(router).mount("#app");
 </template>
 ```
 
-12. Überprüfe, ob alles funktioniert, wie es soll. Du solltest nun zwischen den beiden Seiten hin und her navigieren können
+### 12. Überprüfe,
 
-13. Ersetze den Inhalt von **./resources/router.js** mit folgendem Code
+ob alles funktioniert, wie es soll. Du solltest nun zwischen den beiden Seiten hin und her navigieren können
+
+### 13. Ersetze
+
+den Inhalt von **./resources/router.js** mit folgendem Code
 
 ```javascript
 import { createRouter, createWebHistory } from "vue-router";
@@ -178,7 +185,9 @@ export default createRouter({
 });
 ```
 
-14. Ersetze den Inhalt in **App.vue** mit folgendem Code. Mit diesem Snippet wird automatisch die korrekte Komponente, die in **router.js** definiert wurde geladen
+### 14. Passe App.vue an
+
+Ersetze den Inhalt in **App.vue** mit folgendem Code. Mit diesem Snippet wird automatisch die korrekte Komponente, die in **router.js** definiert wurde geladen
 
 ```html
 <template>
@@ -190,7 +199,9 @@ export default createRouter({
 </template>
 ```
 
-15. Füge folgenden Code unter **./routes/web.php** ein und ersetze damit alles, was darin steht. Dieses Snippet stellt sicher, dass das Routing von vue.js übernommen wird.
+### 15. Ändere ./routes/web.php
+
+Füge folgenden Code unter **./routes/web.php** ein und ersetze damit alles, was darin steht. Dieses Snippet stellt sicher, dass das Routing von vue.js übernommen wird.
 
 ```php
 <?php
@@ -201,7 +212,9 @@ Route::get('/{vue_capture?}', function () {
 })->where('vue_capture', '[\/\w\.-]*');
 ```
 
-16. Öffne das File **./routes/api.php**. Hier werden die API Routes verwaltet. Ersetze alles, was bereits darin steht mit folgendem:
+### 16. Öffne **./routes/api.php**
+
+Hier werden die API Routes verwaltet. Ersetze alles, was bereits darin steht mit folgendem:
 
 ```php
 <?php
@@ -213,7 +226,9 @@ Route::get("/test-me", function () {
 });
 ```
 
-17. Füge folgendes in **Home.vue** hinzu um zu testen, ob alles funktioniert (Wenn Du den Button klickst, lädt es Dein **Return Statement** aus **./routes/api.php**)
+### 17. Home.vue anpassen
+
+Füge folgendes in **Home.vue** hinzu um zu testen, ob alles funktioniert (Wenn Du den Button klickst, lädt es Dein **Return Statement** aus **./routes/api.php**)
 
 ```javascript
 <template>
@@ -243,7 +258,8 @@ Route::get("/test-me", function () {
 
 ```
 
-18. Abschluss
+### 18. Abschluss
+
     Du hast das Setup nun abgeschlossen und Deine Applikation ist bereit um mit vue.js im Frontend und Laravel im Backend zu arbeiten.
 
 ## Quellen
