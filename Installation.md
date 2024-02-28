@@ -252,7 +252,6 @@ Füge folgendes in **Home.vue** hinzu um zu testen, ob alles funktioniert (Wenn 
         }
     };
 </script>
-
 ```
 
 ### 18. Abschluss
