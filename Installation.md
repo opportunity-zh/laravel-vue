@@ -4,19 +4,21 @@ Eine Installationsanleitung um Laravel und vue.js gemeinsam zu nutzen. Laravel d
 
 ## Installation
 
-1. Laravel mit Sail installieren
-   Um Laravel für die Verwendung mit Docker (Laravel Sail) zu verwenden, kannst Du den folgenden Befehl in Dein Terminal kopieren und ausführen lassen. Navigiere zuerst in Deinen Projektordner. Der lettze Teil der URL (Hier: laravel-vue) ist nach dem Ausführen des Befehls der name Deines Projekts. Du kannst das beliebig ändern.
+### 1. Laravel mit Sail installieren
+
+Um Laravel für die Verwendung mit Docker (Laravel Sail) zu verwenden, kannst Du den folgenden Befehl in Dein Terminal kopieren und ausführen lassen. Navigiere zuerst in Deinen Projektordner. Der lettze Teil der URL (Hier: laravel-vue) ist nach dem Ausführen des Befehls der name Deines Projekts. Du kannst das beliebig ändern.
 
 ```bash
 curl -s https://laravel.build/laravel-vue | bash
 ```
 
-1.2. Öffne das Projekt in VS Code
-1.3. Öffne das Terminal in VS Code
+1.2. Öffne das Projekt in VS Code  
+1.3. Öffne das Terminal in VS Code  
 1.4. Verwende den Befehl npm install um alle Dependencies zu installieren
 
-2. Vuejs installieren
-   2.1. Zuerst kopiere folgenden Befehl ins Terminal
+### 2. Vuejs installieren
+
+    2.1. Zuerst kopiere folgenden Befehl ins Terminal
 
     ```bash
      npm install vue vue-router@4 @vitejs/plugin-vue

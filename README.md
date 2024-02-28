@@ -10,7 +10,7 @@ Eine Vorlage für die Verwendung von Laravel mit vue.js.
    Lade das Repository auf Deinen Computer herunter, benenne es um und verschiebe es in Deinen Projektordner.
 
 2. Selber einrichten
-   Wenn Du selber alles einrichten willst, um einen genaueren Überblick zu erhalten, kannst Du Dir die Installation.md anschauen und die Schritte selber durchgehen.
+   Wenn Du selber alles einrichten willst, um einen genaueren Überblick zu erhalten, kannst Du Dir die [Installation.md](https://github.com/opportunity-zh/laravel-vue/blob/main/Installation.md) anschauen und die Schritte selber durchgehen.
 
 ### 2. Dependencies installieren
 
