@@ -18,70 +18,70 @@ curl -s https://laravel.build/laravel-vue | bash
 
 ### 2. Vuejs installieren
 
-    2.1. Zuerst kopiere folgenden Befehl ins Terminal
+2.1. Zuerst kopiere folgenden Befehl ins Terminal
 
-    ```bash
-     npm install vue vue-router@4 @vitejs/plugin-vue
-    ```
+```bash
+    npm install vue vue-router@4 @vitejs/plugin-vue
+```
 
-    2.2. Öffne das File **vite.config.js** im Rootfolder
-    2.3. Ersetze den Code mit folgendem
+2.2. Öffne das File **vite.config.js** im Rootfolder
+2.3. Ersetze den Code mit folgendem
 
-    ```javascript
-    import { defineConfig } from "vite";
-    import laravel from "laravel-vite-plugin";
-    import vue from "@vitejs/plugin-vue";
+```javascript
+import { defineConfig } from "vite";
+import laravel from "laravel-vite-plugin";
+import vue from "@vitejs/plugin-vue";
 
-    export default defineConfig({
-        plugins: [
-            vue(),
-            laravel({
-                input: ["resources/css/app.css", "resources/js/app.js"],
-                refresh: true,
-            }),
-        ],
-        resolve: {
-            alias: {
-                vue: "vue/dist/vue.esm-bundler.js",
-            },
+export default defineConfig({
+    plugins: [
+        vue(),
+        laravel({
+            input: ["resources/css/app.css", "resources/js/app.js"],
+            refresh: true,
+        }),
+    ],
+    resolve: {
+        alias: {
+            vue: "vue/dist/vue.esm-bundler.js",
         },
-    });
-    ```
+    },
+});
+```
 
-    2.4. Gehe in den Ordner ./resources/js
-    2.5. Füge ein File mit dem Namen **App.vue** hinzu
-    2.6. Füge folgenden Code hinzu
+2.4. Gehe in den Ordner ./resources/js
+2.5. Füge ein File mit dem Namen **App.vue** hinzu
+2.6. Füge folgenden Code hinzu
 
-    ```html
-    <template>
-        <h1>Opportunity rocks! 🤘</h1>
-    </template>
-    ```
+```html
+<template>
+    <h1>Opportunity rocks! 🤘</h1>
+</template>
+```
 
-    2.7. Öffne im selben Ordner das File **app.js**
-    2.8. Füge folgenden Code hinzu (Dieser Code rendert die Vue-App in das index.html File)
+2.7. Öffne im selben Ordner das File **app.js**
+2.8. Füge folgenden Code hinzu (Dieser Code rendert die Vue-App in das index.html File)
 
-    ```javascript
-    import "./bootstrap";
-    import { createApp } from "vue";
+```javascript
+import "./bootstrap";
+import { createApp } from "vue";
 
-    import App from "./App.vue";
+import App from "./App.vue";
 
-    createApp(App).mount("#app");
-    ```
+createApp(App).mount("#app");
+```
 
-    2.9. Öffne unter **./resources/views/** das welcome.blade.php File
-    2.9. Lösche den Inhalt, erstelle eine HTML Grundstruktur, füge folgendes in den Bodytag
+2.9. Öffne unter **./resources/views/** das welcome.blade.php File
+2.9. Lösche den Inhalt, erstelle eine HTML Grundstruktur, füge folgendes in den Bodytag
 
-    ```html
-    <div id="app"></div>
-    ```
+```html
+<div id="app"></div>
+```
 
-    2.9. Füge folgendes Snipped in den Headtag
+2.9. Füge folgendes Snipped in den Headtag
 
-    ```html
-    @vite(['resources/js/app.js'])
-    ```
+```html
+@vite(['resources/js/app.js'])
+```
 
 3. Starte Sail (Docker) mit folgendem Befehl
 
