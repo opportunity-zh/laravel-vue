@@ -16,10 +16,20 @@ Wenn Du selber alles einrichten willst, um einen genaueren Überblick zu erhalte
 
 ### 2. Dependencies installieren
 
+#### 1. NPM Packages
+
 Öffne das Projekt in VS Code, öffne das Terminal und verwende den folgedenden Befehl um alle Dependencies (Packages) zu installieren.
 
 ```bash
 npm install
+```
+
+#### 2. Composer Packages
+
+Im selben Terminal kannst Du auch gleich die Composer Packages installieren, indem Du folgenden Befehl eingibst:
+
+```bash
+composer install
 ```
 
 ### 3. Environment Variablen anpassen
