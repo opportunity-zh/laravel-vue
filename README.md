@@ -26,10 +26,16 @@ npm install
 
 #### 2. Composer Packages
 
-Im selben Terminal kannst Du auch gleich die Composer Packages installieren, indem Du folgenden Befehl eingibst:
+Im selben Terminal kannst Du auch gleich die Composer Packages installieren, indem Du folgenden Befehl eingibst.
+Dieser Befehl erstellt einen minimal konfigurierten Docker Container, um die Composer Packages zu installieren.
 
 ```bash
-composer install
+docker run --rm \
+    -u "$(id -u):$(id -g)" \
+    -v "$(pwd):/var/www/html" \
+    -w /var/www/html \
+    laravelsail/php81-composer:latest \
+    composer install --ignore-platform-reqs
 ```
 
 ### 3. Environment Variablen anpassen
